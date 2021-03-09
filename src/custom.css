@@ -1,0 +1,83 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+* {
+  --text-extra-bright: white;
+  --text-bright: #e1e1e1;
+  --text-medium: #a1a1a1;
+  --text-medium-dark: gray;
+  --text-dark: #333333;
+  --element-hover: rgba(80, 80, 80, 0.8);
+  --element-selected: rgba(80, 80, 80, 0.5);
+}
+
+summary {
+  outline: none; /* remove border on select */
+  cursor: pointer;
+}
+
+summary:hover {
+  background-color: var(--element-hover);
+}
+
+details[open] {
+  background-color: var(--element-selected);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  font-family: 'Gill Sans', sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+
+.app-container,
+.overlay {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.app-header,
+.app-content {
+  z-index: 1;
+  align-self: center;
+  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 90%;
+}
+
+.nav-items {
+  flex: 0 0 300px;
+}
